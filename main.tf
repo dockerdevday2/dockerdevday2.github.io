@@ -108,12 +108,3 @@ resource "helm_release" "helm_deploy_3" {
 
 # }
 
-# # Deploy Grafana using Helm
-# resource "helm_release" "helm_chart_3" {
-#   name       = "grafana"
-#   repository = "https://grafana.github.io/helm-charts"
-#   chart      = "grafana"
-#   version    = "6.9.0"
-#   namespace  = "default"
-#   atomic     = true
-# }
