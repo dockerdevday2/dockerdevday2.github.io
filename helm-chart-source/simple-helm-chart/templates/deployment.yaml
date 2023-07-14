@@ -13,7 +13,11 @@ spec:
     matchLabels:
       app: {{ .Values.application.name }}
       release: {{ .Release.Name }}
-  strategy:
+  template:
+    metadata:
+      labels:
+        app: {{ .Values.application.name }}
+        release: {{ .Release.Name }}
     spec:
       containers:
         name: {{ .Values.application.name }}
