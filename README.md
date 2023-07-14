@@ -42,3 +42,34 @@ docker tag todolist <your-dockerhub-username>/todolist
 docker push <your-dockerhub-username>/todolist
 ```
 
+### Start Minikube
+```
+minikube start
+```
+
+### Clone this repository
+```
+git clone https://github.com/dockerdevday2/dockerdevday2.github.io.git
+cd dockerdevday2.github.io
+```
+
+### Get list of all available helm repositories
+```
+helm repo list
+```
+
+### Add helm repository
+```
+helm repo add dockerdevday2 https://dockerdevday2.github.io/helm-charts/
+```
+
+### Check if helm repository is added and charts are available
+```
+helm repo list
+helm search repo dockerdevday2
+```
+
+### Manually install helm chart
+```
+helm install todolist dockerdevday2/simple-helm-chart -f todolist-values.yaml
+```

@@ -7,9 +7,6 @@ metadata:
   labels:
     app: {{ .Values.application.name }}
     release: {{ .Release.Name }}
-    heritage: {{ .Release.Service }}
-    image: {{ .Values.image.repository }}
-    imageVersion: {{ .Values.image.tag }}
 spec:
   replicas: {{ .Values.deployment.replicas }}
   selector:

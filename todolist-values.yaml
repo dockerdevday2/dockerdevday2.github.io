@@ -1,0 +1,20 @@
+namespace: 'default'
+
+deployment:
+  enabled: true
+  type: 'server'
+  replicas: 1
+  containerPort: 80
+
+application:
+  name: todo-list
+
+image:
+  repository: varunelavia/todo-list
+  tag: v1
+  pullPolicy: Always
+
+service:
+  type: ClusterIP
+  port: 80
+  targetPort: http
