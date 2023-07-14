@@ -97,23 +97,23 @@ resource "helm_release" "helm_deploy_3" {
 
 
 
-# Deploy fluent-bit using Helm
-resource "helm_release" "helm_chart_2" {
-  name       = "fluent-bit"
-  repository = "https://fluent.github.io/helm-charts"
-  chart      = "fluent-bit"
-  version    = "0.20.2"
-  namespace  = "default"
-  atomic     = true
+# # Deploy fluent-bit using Helm
+# resource "helm_release" "helm_chart_2" {
+#   name       = "fluent-bit"
+#   repository = "https://fluent.github.io/helm-charts"
+#   chart      = "fluent-bit"
+#   version    = "0.20.2"
+#   namespace  = "default"
+#   atomic     = true
 
-}
+# }
 
-# Deploy Grafana using Helm
-resource "helm_release" "helm_chart_3" {
-  name       = "grafana"
-  repository = "https://grafana.github.io/helm-charts"
-  chart      = "grafana"
-  version    = "6.9.0"
-  namespace  = "default"
-  atomic     = true
-}
+# # Deploy Grafana using Helm
+# resource "helm_release" "helm_chart_3" {
+#   name       = "grafana"
+#   repository = "https://grafana.github.io/helm-charts"
+#   chart      = "grafana"
+#   version    = "6.9.0"
+#   namespace  = "default"
+#   atomic     = true
+# }
