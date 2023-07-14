@@ -1,0 +1,31 @@
+{{- if .Values.deployment.enabled -}}
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: {{ .Values.application.name }}
+  namespace: {{ .Values.namespace }}
+  labels:
+    app: {{ .Values.application.name }}
+    release: {{ .Release.Name }}
+    heritage: {{ .Release.Service }}
+    image: {{ .Values.image.repository }}
+    imageVersion: {{ .Values.image.tag }}
+spec:
+  replicas: {{ .Values.deployment.replicas }}
+  selector:
+    matchLabels:
+      app: {{ .Values.application.name }}
+      release: {{ .Release.Name }}
+  strategy:
+    spec:
+      containers:
+        name: {{ .Values.application.name }}
+        image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
+        imagePullPolicy: {{ .Values.image.pullPolicy }}
+        {{- if eq .Values.deployment.type "server"}}
+        ports:
+          - name: http
+            containerPort: {{ .Values.deployment.containerPort }}
+            protocol: TCP
+        {{- end}}
+{{- end -}}

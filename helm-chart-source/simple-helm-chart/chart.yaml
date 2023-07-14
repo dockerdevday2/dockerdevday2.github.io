@@ -1,0 +1,6 @@
+apiVersion: v2
+appVersion: 1.0.0
+description: A simple helm chart for deploying a microservice with a deployment and service
+name: simple-helm-chart
+type: application
+version: 1.0.0

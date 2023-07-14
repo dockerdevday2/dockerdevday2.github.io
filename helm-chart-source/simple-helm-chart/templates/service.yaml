@@ -1,0 +1,25 @@
+{{- if eq .Values.deployment.type "server" -}}
+apiVersion: v1
+kind: Service
+metadata:
+  name: {{ .Values.application.name }}
+  namespace: {{ .Values.namespace }}
+  labels:
+    app: {{ .Values.application.name }}
+    release: {{ .Release.Name }}
+    heritage: {{ .Release.Service }}
+    image: {{ .Values.image.repository }}
+    imageVersion: {{ .Values.image.tag }}
+spec:
+  type: {{ .Values.service.type }}
+  ports:
+    - port: {{ .Values.service.port }}
+      {{- if and (.Values.service.targetPort) }}
+      targetPort: {{ .Values.service.targetPort }}
+      {{- end }}
+      protocol: TCP
+      name: http
+  selector:
+    app: {{ .Values.application.name }}
+    release: {{ .Release.Name }}
+{{- end -}}
