@@ -96,12 +96,24 @@ resource "helm_release" "helm_deploy_3" {
 }
 
 
-# Deploy kube-prometheus-stack using Helm
-# resource "helm_release" "helm_chart" {
-#   name       = "kube-prometheus-stack"
-#   repository = "https://prometheus-community.github.io/helm-charts"
-#   chart      = "kube-prometheus-stack"
-#   version    = "13.11.0"
-#   namespace  = "default"
-#   atomic     = true
-# }
+
+# Deploy fluent-bit using Helm
+resource "helm_release" "helm_chart_2" {
+  name       = "fluent-bit"
+  repository = "https://fluent.github.io/helm-charts"
+  chart      = "fluent-bit"
+  version    = "0.20.2"
+  namespace  = "default"
+  atomic     = true
+
+}
+
+# Deploy Grafana using Helm
+resource "helm_release" "helm_chart_3" {
+  name       = "grafana"
+  repository = "https://grafana.github.io/helm-charts"
+  chart      = "grafana"
+  version    = "6.9.0"
+  namespace  = "default"
+  atomic     = true
+}
