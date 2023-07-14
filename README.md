@@ -22,7 +22,7 @@ For the demo, we will use an open-source simple ToDo List app which is available
 - URL : https://github.com/tusharnankani/ToDoList
 - [Credits](credits.md) to the owner : tusharnankani
 
-### Build and Push docker image for ToDo List Application (practice at your own time)
+### Build and run docker image for ToDo List Application (practice at your own time)
 ```
 git clone https://github.com/tusharnankani/ToDoList
 cd ToDoList
@@ -31,7 +31,14 @@ FROM httpd:latest
 COPY ./ /usr/local/apache2/htdocs/
 EXPOSE 80
 EOT
-docker build -t <YOUR-DOCKERHUB-USERNAME>/todolist . ## replace <YOUR-DOCKERHUB-USERNAME> with your dockerhub username
-docker login ## if you are not logged in
-docker push <YOUR-DOCKERHUB-USERNAME>/todolist ## replace <YOUR-DOCKERHUB-USERNAME> with your dockerhub username
+docker build -t todolist .
+docker run -d --name todolist -p 80:80 todolist
 ```
+
+### Push docker image to Docker Hub (practice at your own time)
+```
+docker login
+docker tag todolist <your-dockerhub-username>/todolist
+docker push <your-dockerhub-username>/todolist
+```
+
