@@ -1,2 +1,11 @@
 ## Important URLS
 - Steps on how to make Github repo as your own helm repository : https://medium.com/@mattiaperi/create-a-public-helm-chart-repository-with-github-pages-49b180dbb417
+- Port-Forwarding in K8s : https://kubernetes.io/docs/tasks/access-application-cluster/port-forward-access-application-cluster/
+- K8s Deployment Doc : https://kubernetes.io/docs/concepts/workloads/controllers/deployment/
+- K8s Service Doc : https://kubernetes.io/docs/concepts/services-networking/service/
+- Terraform Helm Provider : https://registry.terraform.io/providers/hashicorp/helm/latest/docs
+- Terraform Helm Release Resource : https://registry.terraform.io/providers/hashicorp/helm/latest/docs/resources/release
+- ToDo List docker image : https://hub.docker.com/repository/docker/varunelavia/todo-list/
+- Helm Docs : https://helm.sh/docs/
+- Helm Commands : https://helm.sh/docs/helm/
+- Terrafom Docs : https://www.terraform.io/docs/index.html
