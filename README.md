@@ -88,3 +88,30 @@ kubectl port-forward svc/todolist 8080:80
 ```
 http://localhost:8080
 ```
+
+### Uninstall helm chart
+```
+helm uninstall todolist
+```
+
+### Deploy helm chart using Terraform
+```
+terraform init
+terraform plan
+terraform apply
+```
+
+### Check if helm chart is installed
+```
+helm list
+```
+
+### Port forward to access the application
+```
+kubectl port-forward svc/todolist 8080:80
+```
+
+### Access the application
+```
+http://localhost:8080
+```
