@@ -23,7 +23,6 @@ For the demo, we will use an open-source simple ToDo List app which is available
 - [Credits](credits.md) to the owner : tusharnankani
 
 ### Build docker image for ToDo List Application (practice at your own time)
-- Clone the repo
 ```
 git clone https://github.com/tusharnankani/ToDoList
 cd ToDoList
