@@ -1,6 +1,7 @@
 # Deploy ToDo List App using simple-helm-chart with Terraform
 
 # Configure the Helm provider
+
 provider "helm" {
   kubernetes {
     config_path = "~/.kube/config" # Path to your Kube config file
