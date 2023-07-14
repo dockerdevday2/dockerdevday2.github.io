@@ -20,13 +20,13 @@ spec:
         release: {{ .Release.Name }}
     spec:
       containers:
-        name: {{ .Values.application.name }}
-        image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
-        imagePullPolicy: {{ .Values.image.pullPolicy }}
-        {{- if eq .Values.deployment.type "server"}}
-        ports:
-          - name: http
-            containerPort: {{ .Values.deployment.containerPort }}
-            protocol: TCP
-        {{- end}}
+        - name: {{ .Values.application.name }}
+          image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
+          imagePullPolicy: {{ .Values.image.pullPolicy }}
+          {{- if eq .Values.deployment.type "server"}}
+          ports:
+            - name: http
+              containerPort: {{ .Values.deployment.containerPort }}
+              protocol: TCP
+          {{- end}}
 {{- end -}}
