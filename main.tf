@@ -18,7 +18,7 @@ resource "helm_release" "helm_deploy_with_values_file" {
   namespace  = "default"
   atomic     = true
   values = [
-    "${file("todolist-values.yaml")}"
+    "${file("values.yaml")}"
   ]
 }
 

@@ -71,7 +71,7 @@ helm search repo dockerdevday2
 
 ### Manually install helm chart
 ```
-helm install todolist dockerdevday2/simple-helm-chart -f todolist-values.yaml
+helm install todolist dockerdevday2/simple-helm-chart -f values.yaml
 ```
 
 ### Check if helm chart is installed
