@@ -20,4 +20,4 @@
 ### Which Application to use ?
 For the demo, we will use an open-source simple ToDo List app which is available on GitHub,
 - URL : https://github.com/tusharnankani/ToDoList
-- [Credits](CREDITS.md) to the owner : tusharnankani
+- [Credits](credits.md) to the owner : tusharnankani

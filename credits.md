@@ -1,1 +1,1 @@
-### Thanks to https://github.com/tusharnankani for providing sample To-Do app code on GitHub. Ref: https://github.com/tusharnankani/ToDoList
+- ### Thanks to https://github.com/tusharnankani for providing sample To-Do app code on GitHub. Ref: https://github.com/tusharnankani/ToDoList
