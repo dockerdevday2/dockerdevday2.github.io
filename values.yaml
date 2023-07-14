@@ -5,7 +5,7 @@ deployment:
   containerPort: 80
 
 application:
-  name: todolist
+  name: todolist-1
 
 image:
   repository: varunelavia/todo-list

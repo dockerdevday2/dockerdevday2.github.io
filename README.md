@@ -81,7 +81,7 @@ helm list
 
 ### Port forward to access the application
 ```
-kubectl port-forward svc/todolist 8080:80
+kubectl port-forward svc/todolist-1 8080:80
 ```
 
 ### Access the application
@@ -108,14 +108,11 @@ helm list
 
 ### Port forward to access the application
 ```
-kubectl port-forward svc/todolist 8080:80
-kubectl port-forward svc/todolist-set-values 8081:80
+kubectl port-forward svc/todolist-1 8001:80
+kubectl port-forward svc/todolist-2 8002:80
+kubectl port-forward svc/todolist-3 8003:80
 ```
 
-### Access the application
-```
-http://localhost:8080
-```
 
 ### Uninstall helm chart / cleanup
 ```

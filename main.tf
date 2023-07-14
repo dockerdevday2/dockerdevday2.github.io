@@ -10,8 +10,8 @@ provider "helm" {
 
 # Deploy the Helm chart with values file
 
-resource "helm_release" "helm_deploy_with_values_file" {
-  name       = "todolist-app-with-values-file"
+resource "helm_release" "helm_deploy_1" {
+  name       = "todolist-app-1"
   repository = "https://dockerdevday2.github.io/helm-charts/"
   chart      = "simple-helm-chart"
   version    = "1.0.0" # Chart version
@@ -24,8 +24,8 @@ resource "helm_release" "helm_deploy_with_values_file" {
 
 # Deploy the Helm chart with setting individual values
 
-resource "helm_release" "helm_deploy_with_values" {
-  name       = "todolist-app-with-setting-values"
+resource "helm_release" "helm_deploy_2" {
+  name       = "todolist-app-2"
   repository = "https://dockerdevday2.github.io/helm-charts/"
   chart      = "simple-helm-chart"
   version    = "1.0.0" # Chart version
@@ -74,5 +74,23 @@ resource "helm_release" "helm_deploy_with_values" {
   set {
     name  = "service.targetPort"
     value = var.service_targetPort
+  }
+}
+
+# Deploy the Helm chart with values file and individual values
+
+resource "helm_release" "helm_deploy_3" {
+  name       = "todolist-app-3"
+  repository = "https://dockerdevday2.github.io/helm-charts/"
+  chart      = "simple-helm-chart"
+  version    = "1.0.0" # Chart version
+  namespace  = "default"
+  atomic     = true
+  values = [
+    "${file("values.yaml")}"
+  ]
+  set {
+    name  = "application.name"
+    value = "todolist-3"
   }
 }
