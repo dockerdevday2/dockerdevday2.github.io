@@ -3,13 +3,13 @@ entries:
   simple-helm-chart:
   - apiVersion: v2
     appVersion: 1.0.0
-    created: "2023-07-14T19:58:48.847386+05:30"
+    created: "2023-07-14T20:06:49.036597+05:30"
     description: A simple helm chart for deploying a microservice with a deployment
       and service
-    digest: b1342672a8c1a94fc1b289019afd6d631b3a7ada83a479c44bfa7058f7c72dca
+    digest: 4d8a978f4cc6dce1e9698f04d3944f418575d2e73bda4457611d600ccf75e53f
     name: simple-helm-chart
     type: application
     urls:
     - https://dockerdevday2.github.io/helm-charts/simple-helm-chart-1.0.0.tgz
     version: 1.0.0
-generated: "2023-07-14T19:58:48.846292+05:30"
+generated: "2023-07-14T20:06:49.034629+05:30"
