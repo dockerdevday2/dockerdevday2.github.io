@@ -109,6 +109,7 @@ helm list
 ### Port forward to access the application
 ```
 kubectl port-forward svc/todolist 8080:80
+kubectl port-forward svc/todolist-set-values 8081:80
 ```
 
 ### Access the application
