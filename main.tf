@@ -94,3 +94,14 @@ resource "helm_release" "helm_deploy_3" {
     value = "todolist-3"
   }
 }
+
+
+# Deploy kube-prometheus-stack using Helm
+# resource "helm_release" "helm_chart" {
+#   name       = "kube-prometheus-stack"
+#   repository = "https://prometheus-community.github.io/helm-charts"
+#   chart      = "kube-prometheus-stack"
+#   version    = "13.11.0"
+#   namespace  = "default"
+#   atomic     = true
+# }
