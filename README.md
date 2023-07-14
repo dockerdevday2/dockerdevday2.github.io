@@ -17,7 +17,7 @@
 - Helm : https://helm.sh/docs/intro/install/
 - Terraform : https://developer.hashicorp.com/terraform/downloads
 
-### Which Application to use ?
+### Demo Application
 For the demo, we will use an open-source simple ToDo List app which is available on GitHub,
 - URL : https://github.com/tusharnankani/ToDoList
 - [Credits](credits.md) to the owner : tusharnankani
