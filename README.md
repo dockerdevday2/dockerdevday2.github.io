@@ -115,3 +115,8 @@ kubectl port-forward svc/todolist 8080:80
 ```
 http://localhost:8080
 ```
+
+### Uninstall helm chart / cleanup
+```
+terraform destroy
+```
