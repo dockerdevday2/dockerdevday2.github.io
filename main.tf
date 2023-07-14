@@ -33,46 +33,46 @@ resource "helm_release" "helm_deploy_with_values" {
   atomic     = true
   set {
     name  = "deployment.enabled"
-    value = "true"
+    value = var.deployment_enabled
   }
   set {
     name  = "deployment.type"
-    value = "server"
+    value = var.deployment_type
   }
   set {
     name  = "deployment.replicas"
-    value = "1"
+    value = var.deployment_replicas
   }
   set {
     name  = "deployment.containerPort"
-    value = "80"
+    value = var.deployment_containerPort
   }
   set {
     name  = "application.name"
-    value = "todolist-set-values"
+    value = var.application_name
   }
   set {
     name  = "image.repository"
-    value = "varunelavia/todo-list"
+    value = var.image_repository
   }
   set {
     name  = "image.tag"
-    value = "v1"
+    value = var.image_tag
   }
   set {
     name  = "image.pullPolicy"
-    value = "Always"
+    value = var.image_pullPolicy
   }
   set {
     name  = "service.type"
-    value = "ClusterIP"
+    value = var.service_type
   }
   set {
     name  = "service.port"
-    value = "80"
+    value = var.service_port
   }
   set {
     name  = "service.targetPort"
-    value = "http"
+    value = var.service_targetPort
   }
 }

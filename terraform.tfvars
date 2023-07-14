@@ -1,0 +1,11 @@
+deployment_enabled       = true
+deployment_type          = "server"
+deployment_replicas      = 1
+deployment_containerPort = 80
+application_name         = "todolist-set-values"
+image_repository         = "varunelavia/todo-list"
+image_tag                = "v1"
+image_pullPolicy         = "Always"
+service_type             = "ClusterIP"
+service_port             = 80
+service_targetPort       = "http"
