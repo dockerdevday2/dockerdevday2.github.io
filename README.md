@@ -73,3 +73,18 @@ helm search repo dockerdevday2
 ```
 helm install todolist dockerdevday2/simple-helm-chart -f todolist-values.yaml
 ```
+
+### Check if helm chart is installed
+```
+helm list
+```
+
+### Port forward to access the application
+```
+kubectl port-forward svc/todolist 8080:80
+```
+
+### Access the application
+```
+http://localhost:8080
+```
