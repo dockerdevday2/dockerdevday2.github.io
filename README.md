@@ -42,6 +42,11 @@ docker tag todolist <your-dockerhub-username>/todolist
 docker push <your-dockerhub-username>/todolist
 ```
 
+### Docker image for ToDo List Application
+```
+varunelavia/todo-list
+```
+
 ### Start Minikube
 ```
 minikube start
