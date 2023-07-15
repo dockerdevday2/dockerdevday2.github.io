@@ -77,12 +77,11 @@ resource "helm_release" "helm_deploy_2" {
   }
 }
 
-# Deploy the Helm chart with values file and individual values
+# Deploy the Helm chart with values file, individual values and local chart
 
 resource "helm_release" "helm_deploy_3" {
   name       = "todolist-app-3"
-  repository = "https://dockerdevday2.github.io/helm-charts/"
-  chart      = "simple-helm-chart"
+  chart      = "./helm-chart-source/simple-helm-chart"
   version    = "1.0.0" # Chart version
   namespace  = "default"
   atomic     = true
